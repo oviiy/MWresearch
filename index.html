@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MW Research — Projects</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:#080c12;
+  font-family:'Segoe UI',system-ui,sans-serif;
+  color:#e0e0e0;
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:40px 20px;
+}
+.hero{text-align:center;margin-bottom:48px;}
+.hero h1{
+  font-size:2.4rem;font-weight:900;letter-spacing:3px;
+  background:linear-gradient(135deg,#00d4ff,#f0c040);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:10px;
+}
+.hero p{font-size:.88rem;color:#445;letter-spacing:1px;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  width:100%;max-width:800px;
+}
+
+.card{
+  background:#0d1420;
+  border:1px solid #1a2233;
+  border-radius:14px;
+  padding:24px 22px;
+  text-decoration:none;
+  color:#e0e0e0;
+  transition:all .2s;
+  display:flex;flex-direction:column;gap:10px;
+  position:relative;overflow:hidden;
+}
+.card::before{
+  content:'';position:absolute;inset:0;
+  background:var(--glow);
+  opacity:0;transition:opacity .3s;border-radius:14px;
+}
+.card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.5);}
+.card:hover::before{opacity:1;}
+
+.card-icon{font-size:2rem;line-height:1;}
+.card-title{font-size:1rem;font-weight:800;color:#fff;letter-spacing:.5px;}
+.card-desc{font-size:.75rem;color:#556;line-height:1.5;}
+.card-tag{
+  display:inline-block;margin-top:auto;
+  font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;
+  color:var(--accent);font-weight:700;
+  border:1px solid var(--accent);border-radius:20px;
+  padding:3px 10px;width:fit-content;
+  opacity:.8;
+}
+
+.footer{margin-top:48px;font-size:.65rem;color:#223;letter-spacing:1px;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>MW RESEARCH</h1>
+  <p>Interactive projects &amp; experiments</p>
+</div>
+
+<div class="grid">
+
+  <a class="card" href="texasmulti.html"
+     style="--accent:#f0c040;--glow:radial-gradient(ellipse at top left,rgba(240,192,64,.06),transparent 70%)">
+    <div class="card-icon">♠️</div>
+    <div class="card-title">Texas Hold'em</div>
+    <div class="card-desc">Multiplayer poker vs AI opponents. Full game with blinds, betting rounds, and hand evaluation.</div>
+    <span class="card-tag">Game</span>
+  </a>
+
+  <a class="card" href="texas.html"
+     style="--accent:#e74c3c;--glow:radial-gradient(ellipse at top left,rgba(231,76,60,.06),transparent 70%)">
+    <div class="card-icon">🃏</div>
+    <div class="card-title">Texas Hold'em v1</div>
+    <div class="card-desc">Original single-player poker game with AI dealer and classic Hold'em rules.</div>
+    <span class="card-tag">Game</span>
+  </a>
+
+  <a class="card" href="maze.html"
+     style="--accent:#00d4ff;--glow:radial-gradient(ellipse at top left,rgba(0,212,255,.06),transparent 70%)">
+    <div class="card-icon">◈</div>
+    <div class="card-title">Maze Generator</div>
+    <div class="card-desc">Animated maze generation with DFS, Prim's &amp; Kruskal's algorithms. Watch it build and solve.</div>
+    <span class="card-tag">Visualizer</span>
+  </a>
+
+  <a class="card" href="convexity.jsx"
+     style="--accent:#2ecc71;--glow:radial-gradient(ellipse at top left,rgba(46,204,113,.06),transparent 70%)">
+    <div class="card-icon">📈</div>
+    <div class="card-title">Convexity</div>
+    <div class="card-desc">Bond convexity and duration visualizer built with React.</div>
+    <span class="card-tag">Finance</span>
+  </a>
+
+</div>
+
+<div class="footer">oviiy.github.io/MWresearch</div>
+
+</body>
+</html>
